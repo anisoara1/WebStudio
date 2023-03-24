@@ -25,7 +25,16 @@
           <a class="logo" href="webstudio.com"
             ><span class="logo__span">Web</span>Studio</a
           >
-          <nav class="navigate">
+          <button
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg class="menu-toggle__icon" width="24" height="24">
+              <use href="images/icons.svg#icon-mobile-meniu-nav"></use>
+            </svg>
+          </button>
+          <nav class="navigate menu">
             <ul class="navigate__list">
               <li>
                 <a class="navigate__item-studio" href="index.html">Studio</a>
@@ -40,7 +49,7 @@
               </li>
             </ul>
           </nav>
-          <ul class="contact contact--flex-direction">
+          <ul class="contact contact--flex-direction menu">
             <li>
               <a class="contact__item" href="mailto:info@devstudio.com">
                 <svg class="contact__icon" width="16" height="12">
@@ -63,10 +72,7 @@
       <section class="first-section">
         <div class="container">
           <div class="main">
-            <h1 class="main__title">
-              EFFECTIVE SOLUTIONS FOR <br />
-              YOUR BUSINESS
-            </h1>
+            <h1 class="main__title">EFFECTIVE SOLUTIONS FOR YOUR BUSINESS</h1>
             <button class="main__btn" type="button" data-modal-open>
               Request our service
             </button>
@@ -81,7 +87,9 @@
                 </svg>
               </button>
               <form class="form" name="contact-form" autocomplete="on">
-                <h3>Leave your information and we'll call you back</h3>
+                <h3 class="form__title">
+                  Leave your information and we'll call<br />you back
+                </h3>
                 <label class="form__label"
                   >Name
                   <svg class="form__icon" width="12" height="12">
@@ -131,9 +139,9 @@
       <section class="section">
         <div class="container">
           <ul class="grid">
-            <li>
+            <li class="grid__list">
               <svg class="grid__icon" width="270" height="120">
-                <svg width="65.32" height="70" x="102.34" y="25">
+                <svg width="65.32" height="70" x="40%" y="25%">
                   <use href="images/icons.svg#icon-antenna-1"></use>
                 </svg>
               </svg>
@@ -143,9 +151,9 @@
                 develop a customized solution.
               </p>
             </li>
-            <li>
+            <li class="grid__list">
               <svg class="grid__icon" width="270" height="120">
-                <svg width="66.96" height="70" x="102.34" y="25">
+                <svg width="66.96" height="70" x="40%" y="25%">
                   <use href="images/icons.svg#icon-clock-1"></use>
                 </svg>
               </svg>
@@ -155,9 +163,9 @@
                 the company: respect your time and deadlines.
               </p>
             </li>
-            <li>
+            <li class="grid__list">
               <svg class="grid__icon" width="270" height="120">
-                <svg width="70" height="53.69" x="102.34" y="25">
+                <svg width="70" height="53.69" x="40%" y="25%">
                   <use href="images/icons.svg#icon-diagram-1"></use>
                 </svg>
               </svg>
@@ -167,9 +175,9 @@
                 solution development and implementation.
               </p>
             </li>
-            <li>
+            <li class="grid__list">
               <svg class="grid__icon" width="270" height="120">
-                <svg width="70" height="70" x="102.34" y="25">
+                <svg width="70" height="70" x="40%" y="25%">
                   <use href="images/icons.svg#icon-astronaut-1"></use>
                 </svg>
               </svg>
@@ -185,39 +193,41 @@
       <!--Product images-->
       <section class="section">
         <div class="container">
-          <h2 class="section__title">What we do</h2>
-          <ul class="grid">
-            <li class="grid__item">
-              <img
-                class="grid__img"
-                src="images/img1.jpg"
-                alt="Working at desktop"
-                width="370"
-                height="294"
-              />
-              <p class="grid__title grid__title--label">DESKTOP APPS</p>
-            </li>
-            <li class="grid__item">
-              <img
-                class="grid__img"
-                src="images/img2.jpg"
-                alt="Laptop and telephone"
-                width="370"
-                height="294"
-              />
-              <p class="grid__title grid__title--label">MOBILE APPS</p>
-            </li>
-            <li class="grid__item">
-              <img
-                class="grid__img"
-                src="images/img3.jpg"
-                alt="Working on tablet"
-                width="370"
-                height="294"
-              />
-              <p class="grid__title grid__title--label">DESIGN SOLUTIONS</p>
-            </li>
-          </ul>
+          <div class="menu">
+            <h2 class="section__title">What we do</h2>
+            <ul class="grid">
+              <li class="grid__item">
+                <img
+                  class="grid__img"
+                  src="images/img1.jpg"
+                  alt="Working at desktop"
+                  width="370"
+                  height="294"
+                />
+                <p class="grid__title grid__title--label">DESKTOP APPS</p>
+              </li>
+              <li class="grid__item">
+                <img
+                  class="grid__img"
+                  src="images/img2.jpg"
+                  alt="Laptop and telephone"
+                  width="370"
+                  height="294"
+                />
+                <p class="grid__title grid__title--label">MOBILE APPS</p>
+              </li>
+              <li class="grid__item">
+                <img
+                  class="grid__img"
+                  src="images/img3.jpg"
+                  alt="Working on tablet"
+                  width="370"
+                  height="294"
+                />
+                <p class="grid__title grid__title--label">DESIGN SOLUTIONS</p>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
       <!--Team members-->
@@ -227,10 +237,10 @@
           <ul class="grid">
             <li class="grid__card">
               <img
+                class="grid__card-image"
                 src="images/photo1.jpg"
                 alt="Product Designer's photo"
                 width="270"
-                height="260"
               />
               <h3 class="grid__name">Christopher Walker</h3>
               <h4 class="grid__text">Product Designer</h4>
@@ -293,10 +303,10 @@
             </li>
             <li class="grid__card">
               <img
+                class="grid__card-image"
                 src="images/photo2.jpg"
                 alt="Frontend Developer's photo"
                 width="270"
-                height="260"
               />
               <h3 class="grid__name">Kylie Evans</h3>
               <h4 class="grid__text">Frontend Developer</h4>
@@ -359,10 +369,10 @@
             </li>
             <li class="grid__card">
               <img
+                class="grid__card-image"
                 src="images/photo3.jpg"
                 alt="Marketing personal's photo"
                 width="270"
-                height="260"
               />
               <h3 class="grid__name">Ryan Harris</h3>
               <h4 class="grid__text">Marketing</h4>
@@ -425,10 +435,10 @@
             </li>
             <li class="grid__card">
               <img
+                class="grid__card-image"
                 src="images/photo4.jpg"
                 alt="UI Designer's photo"
                 width="270"
-                height="260"
               />
               <h3 class="grid__name">Tyler Moore</h3>
               <h4 class="grid__text">UI Designer</h4>
@@ -532,12 +542,58 @@
         </div>
       </section>
     </main>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button
+        class="modal__btn modal__btn--menu js-close-menu"
+        type="button"
+        data-modal-close
+      >
+        <svg class="modal__icon" width="11" height="11" x="3" y="7">
+          <use href="images/icons.svg#icon-Vector"></use>
+        </svg>
+      </button>
+      <ul class="mobile-menu">
+        <li>
+          <a class="mobile-menu__link" href="index.html">Studio</a>
+        </li>
+        <li>
+          <a href="portofolio.html" class="mobile-menu__link">Portofolio</a>
+        </li>
+        <li>
+          <a href="#contact-section" class="mobile-menu__link">Contacts</a>
+        </li>
+      </ul>
+      <div>
+        <ul class="mobile-contact">
+          <li>
+            <a class="mobile-contact__phone" href="tel:+12127724150">
+              +1 212-772-4150</a
+            >
+          </li>
+
+          <li>
+            <a class="mobile-contact__email" href="mailto:info@devstudio.com">
+              info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="mobile-social">
+          <li><a class="mobile-social__link" href="#">Instagram</a></li>
+          <li class="mobile-social__rule"><span></span></li>
+          <li><a class="mobile-social__link" href="#">Twitter</a></li>
+          <li class="mobile-social__rule"><span></span></li>
+          <li><a class="mobile-social__link" href="#">Facebook</a></li>
+          <li class="mobile-social__rule"><span></span></li>
+          <li><a class="mobile-social__link" href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
     <!--Logo and adress-->
     <footer>
       <section class="footer-section">
         <div class="container">
           <div class="grid grid--gap">
-            <div>
+            <div class="footer-contact">
               <a class="logo logo--color-white" href="webstudio.com"
                 ><span class="logo__span">Web</span>Studio</a
               >
@@ -656,5 +712,12 @@
       </section>
     </footer>
     <script src="./modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
