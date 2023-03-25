@@ -1,0 +1,143 @@
+@import "../utils/vars";
+@import "../base/base";
+
+@media (max-width: 768px) and (min-width: 481px) {
+  .body {
+    overflow: hidden;
+  }
+
+  .container {
+    max-width: 768px;
+    min-width: 481px;
+  }
+
+  .header {
+    height: 80px;
+    padding: 15px;
+  }
+
+  .navigate {
+    margin: 0 auto 0 93px;
+  }
+
+  .contact--flex-direction {
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 0 0 99px;
+  }
+
+  .contact__item {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.02em;
+  }
+  .first-section {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4) 180%, #c4c4c4 300%),
+      url("../images/header-img-t.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .first-section {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4) 180%,
+          #c4c4c4 300%
+        ),
+        url("../images/header-img-t@2x.jpg");
+    }
+  }
+
+  .main__title {
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    padding: 0 20%;
+  }
+  .no-menu {
+    display: none;
+  }
+
+  .grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .grid__icon {
+    min-width: 354px;
+  }
+
+  .grid__list {
+    max-width: 354px;
+    flex-basis: auto;
+  }
+
+  .grid--padding {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .grid__logo-item {
+    min-width: 226px;
+    flex-basis: auto;
+  }
+
+  .grid__card {
+    min-width: 354px;
+    flex-basis: auto;
+  }
+
+  .grid__card-image {
+    min-width: 354px;
+  }
+
+  .grid--gap {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 165px;
+    align-items: flex-end;
+  }
+
+  .grid--flex-direction {
+    align-items: center;
+    flex-direction: column;
+    margin-top: -95px;
+  }
+
+  .grid--margin {
+    flex-direction: column;
+  }
+
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact {
+    align-items: center;
+  }
+
+  .grid__img,
+  .grid__overaly,
+  .grid__portofolio-card {
+    max-width: 354px;
+  }
+
+  .grid--wrap {
+    justify-content: flex-start;
+    margin-left: 15px;
+  }
+}

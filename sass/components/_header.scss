@@ -1,15 +1,23 @@
-@import "../sass/utils/vars";
-@import "../sass/base/base";
+@import "../utils/vars";
+@import "../base/base";
 
 .container {
   width: $containerWidth;
   margin: 0 auto;
 }
 
+.menu-toggle,
+.menu-container {
+  visibility: hidden;
+}
+
+.header-section {
+  border-bottom: 1px solid #ececec;
+}
+
 .header {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #ececec;
 }
 
 .logo {
@@ -18,18 +26,19 @@
   line-height: 31px;
   color: #000000;
   text-decoration: none;
+  margin: 0 auto;
 
-  &__span {
-    color: $colorBlue;
+  &--color-white {
+    color: var(--white);
   }
 
-  &--logo--color-white {
-    color: $colorWhite;
+  &__span {
+    color: var(--blue);
   }
 }
 
 .navigate {
-  margin: 32px 350px 32px auto;
+  margin: 32px auto 32px auto;
 
   &__list {
     display: flex;

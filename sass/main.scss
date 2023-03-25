@@ -1,5 +1,9 @@
-@import "../sass/utils/vars";
-@import "../sass/base/base";
+@import "../sass/components/footer";
+@import "../sass/components/header";
+@import "../sass/components/mobile-menu";
+@import "../sass/components/mobile-page";
+@import "../sass/components/pages";
+@import "../sass/components/tablet-page";
 
 .container {
   width: $containerWidth;
@@ -737,8 +741,6 @@
   margin: 0;
   list-style: none;
 }
-
-
 
 .menu .link:hover,
 .menu .link:focus {
