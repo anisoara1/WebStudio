@@ -18,12 +18,12 @@ body {
   background: var(--white);
   color: var(--light-blackblack);
   font-style: normal;
+  overflow-x: hidden;
 }
 
 .container {
   width: 1200px;
   margin: 0 auto;
-  overflow-y: hidden;
 }
 
 .menu-toggle,
@@ -764,10 +764,6 @@ textarea::placeholder {
 }
 
 @media (max-width: 480px) {
-  .container {
-    overflow: hidden;
-  }
-
   .menu,
   .no-menu {
     display: none;
