@@ -18,20 +18,21 @@
     <link rel="stylesheet" href="css/main.css" />
     <title>Studio</title>
   </head>
+
   <body class="studio-page">
     <header class="header-section">
       <div class="container">
         <div class="header">
-          <a class="logo" href="webstudio.com"
-            ><span class="logo__span">Web</span>Studio</a
-          >
+          <a class="logo" href="index.html">
+            <span class="logo__span">Web</span>Studio
+          </a>
           <button
             class="menu-toggle js-open-menu"
             aria-expanded="false"
             aria-controls="mobile-menu"
           >
             <svg class="menu-toggle__icon" width="24" height="24">
-              <use href="images/icons.svg#icon-mobile-meniu-nav"></use>
+              <use xlink:href="images/icons.svg#icon-mobile-menu-nav"></use>
             </svg>
           </button>
           <nav class="navigate menu">
@@ -40,8 +41,8 @@
                 <a class="navigate__item-studio" href="index.html">Studio</a>
               </li>
               <li>
-                <a class="navigate__item-portofolio" href="portofolio.html"
-                  >Portofolio</a
+                <a class="navigate__item-portfolio" href="portfolio.html"
+                  >Portfolio</a
                 >
               </li>
               <li>
@@ -50,24 +51,27 @@
             </ul>
           </nav>
           <ul class="contact contact--flex-direction menu">
-            <li>
+            <li class="contact__item">
               <a class="contact__item" href="mailto:info@devstudio.com">
                 <svg class="contact__icon" width="16" height="12">
-                  <use href="images/icons.svg#icon-envelope"></use></svg
-                >info@devstudio.com</a
-              >
+                  <use xlink:href="images/icons.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
             </li>
             <li>
               <a class="contact__item" href="tel:+12127724150">
                 <svg class="contact__icon" width="10" height="16">
-                  <use href="images/icons.svg#icon-smartphone"></use></svg
-                >+1 212-772-4150</a
-              >
+                  <use xlink:href="images/icons.svg#icon-smartphone"></use>
+                </svg>
+                +1 212-772-4150
+              </a>
             </li>
           </ul>
         </div>
       </div>
     </header>
+
     <main>
       <section class="first-section">
         <div class="container">
@@ -77,73 +81,108 @@
               Request our service
             </button>
           </div>
+
+          <!-- Modal structure -->
           <div class="backdrop is-hidden" data-modal>
-            <div class="modal">
-              <button class="modal__btn" type="button" data-modal-close>
+            <div
+              class="modal"
+              role="dialog"
+              aria-labelledby="modalTitle"
+              tabindex="-1"
+            >
+              <button
+                class="modal__btn"
+                type="button"
+                data-modal-close
+                aria-label="Close modal"
+              >
                 <svg width="30" height="30">
                   <svg class="modal__icon" width="11" height="11" x="3" y="7">
-                    <use href="images/icons.svg#icon-Vector"></use>
+                    <use xlink:href="images/icons.svg#icon-Vector"></use>
                   </svg>
                 </svg>
               </button>
               <form class="form" name="contact-form" autocomplete="on">
-                <h3 class="form__title">
+                <h3 class="form__title" id="modalTitle">
                   Leave your information and we'll call<br />you back
                 </h3>
-                <label class="form__label"
-                  >Name
+                <label class="form__label">
+                  Name
                   <svg class="form__icon" width="12" height="12">
-                    <use href="images/icons.svg#icon-name"></use>
+                    <use xlink:href="images/icons.svg#icon-name"></use>
                   </svg>
-                  <input class="form__input" type="text" name="name" />
+                  <input
+                    class="form__input"
+                    type="text"
+                    name="name"
+                    required
+                    aria-label="Your Name"
+                  />
                 </label>
-                <label class="form__label"
-                  >Telephone
+                <label class="form__label">
+                  Telephone
                   <svg class="form__icon" width="13" height="13">
-                    <use href="images/icons.svg#icon-telephone"></use>
+                    <use xlink:href="images/icons.svg#icon-telephone"></use>
                   </svg>
-                  <input class="form__input" type="number" name="telephone" />
+                  <input
+                    class="form__input"
+                    type="tel"
+                    name="telephone"
+                    required
+                    aria-label="Your Phone"
+                  />
                 </label>
-                <label class="form__label"
-                  >E-mail
+                <label class="form__label">
+                  E-mail
                   <svg class="form__icon" width="15" height="12">
-                    <use href="images/icons.svg#icon-email"></use>
+                    <use xlink:href="images/icons.svg#icon-email"></use>
                   </svg>
-                  <input class="form__input" type="email" name="email" />
+                  <input
+                    class="form__input"
+                    type="email"
+                    name="email"
+                    required
+                    aria-label="Your Email"
+                  />
                 </label>
-                <label class="form__label"
-                  >Comments
+                <label class="form__label">
+                  Comments
                   <textarea
                     class="form__textarea"
                     name="feedback"
                     rows="7"
                     placeholder="Enter the text"
+                    aria-label="Your Comments"
                   ></textarea>
                 </label>
                 <label class="form-terms">
-                  <input type="checkbox" />
+                  <input type="checkbox" required aria-label="Agree to terms" />
                   <span class="form-terms__box-icon"></span>
                   <svg class="form-terms__checkmark" width="13" height="10">
-                    <use href="images/icons.svg#icon-checkmark"></use>
+                    <use xlink:href="images/icons.svg#icon-checkmark"></use>
                   </svg>
-                  I agree with the letter and accept the<span class="form__span"
-                    >Terms and Conditions</span
-                  >
+                  I agree with the letter and accept the
+                  <span class="form__span">Terms and Conditions</span>
                 </label>
+                <button class="form__btn" type="submit">Send</button>
               </form>
-              <button class="form__btn" type="submit">Send</button>
             </div>
           </div>
         </div>
       </section>
+
       <section class="section">
         <div class="container">
-          <ul class="grid">
-            <li class="grid__list">
+          <ul class="grid" role="list">
+            <li class="grid__list" role="listitem">
               <svg class="grid__icon" width="270" height="120">
-                <svg width="65.32" height="70" x="40%" y="25%">
-                  <use href="images/icons.svg#icon-antenna-1"></use>
-                </svg>
+                <use
+                  xlink:href="images/icons.svg#icon-antenna-1"
+                  width="65.32"
+                  height="70"
+                  x="40%"
+                  y="25%"
+                ></use>
               </svg>
               <h3 class="grid__title">ATTENTION TO DETAILS</h3>
               <p class="grid__description">
@@ -151,11 +190,16 @@
                 develop a customized solution.
               </p>
             </li>
-            <li class="grid__list">
+
+            <li class="grid__list" role="listitem">
               <svg class="grid__icon" width="270" height="120">
-                <svg width="66.96" height="70" x="40%" y="25%">
-                  <use href="images/icons.svg#icon-clock-1"></use>
-                </svg>
+                <use
+                  xlink:href="images/icons.svg#icon-clock-1"
+                  width="66.96"
+                  height="70"
+                  x="40%"
+                  y="25%"
+                ></use>
               </svg>
               <h3 class="grid__title">PUNCTUALITY</h3>
               <p class="grid__description">
@@ -163,11 +207,16 @@
                 the company: respect your time and deadlines.
               </p>
             </li>
-            <li class="grid__list">
+
+            <li class="grid__list" role="listitem">
               <svg class="grid__icon" width="270" height="120">
-                <svg width="70" height="53.69" x="40%" y="25%">
-                  <use href="images/icons.svg#icon-diagram-1"></use>
-                </svg>
+                <use
+                  xlink:href="images/icons.svg#icon-diagram-1"
+                  width="70"
+                  height="53.69"
+                  x="40%"
+                  y="25%"
+                ></use>
               </svg>
               <h3 class="grid__title">PLANNING</h3>
               <p class="grid__description">
@@ -175,11 +224,16 @@
                 solution development and implementation.
               </p>
             </li>
-            <li class="grid__list">
+
+            <li class="grid__list" role="listitem">
               <svg class="grid__icon" width="270" height="120">
-                <svg width="70" height="70" x="40%" y="25%">
-                  <use href="images/icons.svg#icon-astronaut-1"></use>
-                </svg>
+                <use
+                  xlink:href="images/icons.svg#icon-astronaut-1"
+                  width="70"
+                  height="70"
+                  x="40%"
+                  y="25%"
+                ></use>
               </svg>
               <h3 class="grid__title">MODERN TECHNOLOGIES</h3>
               <p class="grid__description">
@@ -190,6 +244,7 @@
           </ul>
         </div>
       </section>
+
       <!--Product images-->
       <section class="section">
         <div class="container">
@@ -197,39 +252,59 @@
             <h2 class="section__title">What we do</h2>
             <ul class="grid">
               <li class="grid__item">
+                <figure style="margin: 0;">
                 <img
                   class="grid__img"
-                  srcset="images\img1.jpg 1x, images\photo1@2x.jpg 2x"
-                  src="images\img1.jpg"
-                  alt="Working"
+                  srcset="images/img1.jpg 1x, images/photo1@2x.jpg 2x"
+                  src="images/img1.jpg"
+                  alt="Team collaborating on desktop app development"
                   width="370"
+                  height="240"
+                  sizes="(max-width: 600px) 100vw, 370px"
                 />
-                <p class="grid__title grid__title--label">DESKTOP APPS</p>
+                <figcaption class="grid__title grid__title--label">
+                  DESKTOP APPS
+                </figcaption>
+                </figure>
+
               </li>
               <li class="grid__item">
-                <img
-                  class="grid__img"
-                  srcset="images\img2.jpg 1x, images\img2@2x.jpg 2x"
-                  src="images\img2.jpg"
-                  alt="Working"
-                  width="370"
-                />
-                <p class="grid__title grid__title--label">MOBILE APPS</p>
+                <figure style="margin: 0;">
+                  <img
+                    class="grid__img"
+                    srcset="images/img2.jpg 1x, images/img2@2x.jpg 2x"
+                    src="images/img2.jpg"
+                    alt="Team working on mobile app development"
+                    width="370"
+                    height="240"
+                    sizes="(max-width: 600px) 100vw, 370px"
+                  />
+                  <figcaption class="grid__title grid__title--label">
+                    MOBILE APPS
+                  </figcaption>
+                </figure>
               </li>
               <li class="grid__item">
-                <img
-                  class="grid__img"
-                  srcset="images\img3.jpg 1x, images\img3@2x.jpg 2x"
-                  src="images\img3.jpg"
-                  alt="Working"
-                  width="370"
-                />
-                <p class="grid__title grid__title--label">DESIGN SOLUTIONS</p>
+                <figure style="margin: 0;">
+                  <img
+                    class="grid__img"
+                    srcset="images/img3.jpg 1x, images/img3@2x.jpg 2x"
+                    src="images/img3.jpg"
+                    alt="Designers collaborating on creative solutions"
+                    width="370"
+                    height="240"
+                    sizes="(max-width: 600px) 100vw, 370px"
+                  />
+                  <figcaption class="grid__title grid__title--label">
+                    DESIGN SOLUTIONS
+                  </figcaption>
+                </figure>
               </li>
             </ul>
           </div>
         </div>
       </section>
+
       <!--Team members-->
       <section class="section section--grey-background">
         <div class="container">
@@ -238,267 +313,242 @@
             <li class="grid__card">
               <img
                 class="grid__card-image"
-                srcset="images\photo1.jpg 1x, images\photo1@2x.jpg 2x"
-                src="images\photo1.jpg"
-                alt="Product Designer's photo"
+                srcset="images/photo1.jpg 1x, images/photo1@2x.jpg 2x"
+                src="images/photo1.jpg"
+                alt="Portrait of Christopher Walker, Product Designer"
                 width="270"
+                height="260"
               />
               <h3 class="grid__name">Christopher Walker</h3>
               <h4 class="grid__text">Product Designer</h4>
               <div>
                 <ul class="media-grid">
                   <li>
-                    <button class="media-grid__btn" type="button">
-                      <svg
-                        class="media-grid__icon"
-                        width="20"
-                        height="20"
-                        x="12"
-                        y="12"
-                      >
+                    <a
+                      href="https://instagram.com"
+                      class="media-grid__btn"
+                      aria-label="Follow Christopher Walker on Instagram"
+                    >
+                      <svg class="media-grid__icon" width="20" height="20">
                         <use href="images/icons.svg#icon-instagram-2"></use>
                       </svg>
-                    </button>
+                    </a>
                   </li>
                   <li>
-                    <button class="media-grid__btn" type="button">
-                      <svg
-                        class="media-grid__icon"
-                        width="23"
-                        height="19"
-                        x="12"
-                        y="13.88"
-                      >
+                    <a
+                      href="https://twitter.com"
+                      class="media-grid__btn"
+                      aria-label="Follow Christopher Walker on Twitter"
+                    >
+                      <svg class="media-grid__icon" width="23" height="19">
                         <use href="images/icons.svg#icon-twitter-1"></use>
                       </svg>
-                    </button>
+                    </a>
                   </li>
                   <li>
-                    <button class="media-grid__btn" type="button">
-                      <svg
-                        class="media-grid__icon"
-                        width="20"
-                        height="32"
-                        x="17.16"
-                        y="12"
-                      >
+                    <a
+                      href="https://facebook.com"
+                      class="media-grid__btn"
+                      aria-label="Follow Christopher Walker on Facebook"
+                    >
+                      <svg class="media-grid__icon" width="20" height="32">
                         <use href="images/icons.svg#icon-facebook-1"></use>
                       </svg>
-                    </button>
+                    </a>
                   </li>
                   <li>
-                    <button class="media-grid__btn" type="button">
-                      <svg
-                        class="media-grid__icon"
-                        width="20"
-                        height="20"
-                        x="12"
-                        y="12"
-                      >
+                    <a
+                      href="https://linkedin.com"
+                      class="media-grid__btn"
+                      aria-label="Connect with Christopher Walker on LinkedIn"
+                    >
+                      <svg class="media-grid__icon" width="20" height="20">
                         <use href="images/icons.svg#icon-linkedin-1"></use>
                       </svg>
-                    </button>
+                    </a>
                   </li>
                 </ul>
               </div>
             </li>
+
             <li class="grid__card">
               <img
                 class="grid__card-image"
-                srcset="images\photo2.jpg 1x, images\photo2@2x.jpg 2x"
-                src="images\photo2.jpg"
-                alt="Frontend Developer's photo"
+                srcset="images/photo2.jpg 1x, images/photo2@2x.jpg 2x"
+                src="images/photo2.jpg"
+                alt="Portrait of Kylie Evans, Frontend Developer"
                 width="270"
+                height="260"
               />
               <h3 class="grid__name">Kylie Evans</h3>
               <h4 class="grid__text">Frontend Developer</h4>
               <div>
                 <ul class="media-grid">
                   <li>
-                    <button class="media-grid__btn" type="button">
-                      <svg
-                        class="media-grid__icon"
-                        width="20"
-                        height="20"
-                        x="12"
-                        y="12"
-                      >
+                    <a
+                      href="https://instagram.com"
+                      class="media-grid__btn"
+                      aria-label="Follow Kylie Evans on Instagram"
+                    >
+                      <svg class="media-grid__icon" width="20" height="20">
                         <use href="images/icons.svg#icon-instagram-2"></use>
                       </svg>
-                    </button>
+                    </a>
                   </li>
                   <li>
-                    <button class="media-grid__btn" type="button">
-                      <svg
-                        class="media-grid__icon"
-                        width="23"
-                        height="19"
-                        x="12"
-                        y="13.88"
-                      >
+                    <a
+                      href="https://twitter.com"
+                      class="media-grid__btn"
+                      aria-label="Follow Kylie Evans on Twitter"
+                    >
+                      <svg class="media-grid__icon" width="23" height="19">
                         <use href="images/icons.svg#icon-twitter-1"></use>
                       </svg>
-                    </button>
+                    </a>
                   </li>
                   <li>
-                    <button class="media-grid__btn" type="button">
-                      <svg
-                        class="media-grid__icon"
-                        width="20"
-                        height="32"
-                        x="17.16"
-                        y="12"
-                      >
+                    <a
+                      href="https://facebook.com"
+                      class="media-grid__btn"
+                      aria-label="Follow Kylie Evans on Facebook"
+                    >
+                      <svg class="media-grid__icon" width="20" height="32">
                         <use href="images/icons.svg#icon-facebook-1"></use>
                       </svg>
-                    </button>
+                    </a>
                   </li>
                   <li>
-                    <button class="media-grid__btn" type="button">
-                      <svg
-                        class="media-grid__icon"
-                        width="20"
-                        height="20"
-                        x="12"
-                        y="12"
-                      >
+                    <a
+                      href="https://linkedin.com"
+                      class="media-grid__btn"
+                      aria-label="Connect with Kylie Evans on LinkedIn"
+                    >
+                      <svg class="media-grid__icon" width="20" height="20">
                         <use href="images/icons.svg#icon-linkedin-1"></use>
                       </svg>
-                    </button>
+                    </a>
                   </li>
                 </ul>
               </div>
             </li>
+
             <li class="grid__card">
               <img
                 class="grid__card-image"
-                srcset="images\photo3.jpg 1x, images\photo3@2x.jpg 2x"
-                src="images\photo3.jpg"
-                alt="Marketing personal's photo"
+                srcset="images/photo3.jpg 1x, images/photo3@2x.jpg 2x"
+                src="images/photo3.jpg"
+                alt="Portrait of Ryan Harris, Marketing"
                 width="270"
+                height="260"
               />
               <h3 class="grid__name">Ryan Harris</h3>
               <h4 class="grid__text">Marketing</h4>
               <div>
                 <ul class="media-grid">
                   <li>
-                    <button class="media-grid__btn" type="button">
-                      <svg
-                        class="media-grid__icon"
-                        width="20"
-                        height="20"
-                        x="12"
-                        y="12"
-                      >
+                    <a
+                      href="https://instagram.com"
+                      class="media-grid__btn"
+                      aria-label="Follow Ryan Harris on Instagram"
+                    >
+                      <svg class="media-grid__icon" width="20" height="20">
                         <use href="images/icons.svg#icon-instagram-2"></use>
                       </svg>
-                    </button>
+                    </a>
                   </li>
                   <li>
-                    <button class="media-grid__btn" type="button">
-                      <svg
-                        class="media-grid__icon"
-                        width="23"
-                        height="19"
-                        x="12"
-                        y="13.88"
-                      >
+                    <a
+                      href="https://twitter.com"
+                      class="media-grid__btn"
+                      aria-label="Follow Ryan Harris on Twitter"
+                    >
+                      <svg class="media-grid__icon" width="23" height="19">
                         <use href="images/icons.svg#icon-twitter-1"></use>
                       </svg>
-                    </button>
+                    </a>
                   </li>
                   <li>
-                    <button class="media-grid__btn" type="button">
-                      <svg
-                        class="media-grid__icon"
-                        width="20"
-                        height="32"
-                        x="17.16"
-                        y="12"
-                      >
+                    <a
+                      href="https://facebook.com"
+                      class="media-grid__btn"
+                      aria-label="Follow Ryan Harris on Facebook"
+                    >
+                      <svg class="media-grid__icon" width="20" height="32">
                         <use href="images/icons.svg#icon-facebook-1"></use>
                       </svg>
-                    </button>
+                    </a>
                   </li>
                   <li>
-                    <button class="media-grid__btn" type="button">
-                      <svg
-                        class="media-grid__icon"
-                        width="20"
-                        height="20"
-                        x="12"
-                        y="12"
-                      >
+                    <a
+                      href="https://linkedin.com"
+                      class="media-grid__btn"
+                      aria-label="Connect with Ryan Harris on LinkedIn"
+                    >
+                      <svg class="media-grid__icon" width="20" height="20">
                         <use href="images/icons.svg#icon-linkedin-1"></use>
                       </svg>
-                    </button>
+                    </a>
                   </li>
                 </ul>
               </div>
             </li>
+
             <li class="grid__card">
               <img
                 class="grid__card-image"
-                srcset="images\photo4.jpg 1x, images\photo4@2x.jpg 2x"
-                src="images\photo4.jpg"
-                alt="UI Designer's photo"
+                srcset="images/photo4.jpg 1x, images/photo4@2x.jpg 2x"
+                src="images/photo4.jpg"
+                alt="Portrait of Kylie Evans, UI Designer"
                 width="270"
+                height="260"
               />
               <h3 class="grid__name">Tyler Moore</h3>
               <h4 class="grid__text">UI Designer</h4>
               <div>
                 <ul class="media-grid">
                   <li>
-                    <button class="media-grid__btn" type="button">
-                      <svg
-                        class="media-grid__icon"
-                        width="20"
-                        height="20"
-                        x="12"
-                        y="12"
-                      >
+                    <a
+                      href="https://instagram.com"
+                      class="media-grid__btn"
+                      aria-label="Follow Tyler Moore on Instagram"
+                    >
+                      <svg class="media-grid__icon" width="20" height="20">
                         <use href="images/icons.svg#icon-instagram-2"></use>
                       </svg>
-                    </button>
+                    </a>
                   </li>
                   <li>
-                    <button class="media-grid__btn" type="button">
-                      <svg
-                        class="media-grid__icon"
-                        width="23"
-                        height="19"
-                        x="12"
-                        y="13.88"
-                      >
+                    <a
+                      href="https://twitter.com"
+                      class="media-grid__btn"
+                      aria-label="Follow Tyler Moore on Twitter"
+                    >
+                      <svg class="media-grid__icon" width="23" height="19">
                         <use href="images/icons.svg#icon-twitter-1"></use>
                       </svg>
-                    </button>
+                    </a>
                   </li>
                   <li>
-                    <button class="media-grid__btn" type="button">
-                      <svg
-                        class="media-grid__icon"
-                        width="20"
-                        height="32"
-                        x="17.16"
-                        y="12"
-                      >
+                    <a
+                      href="https://facebook.com"
+                      class="media-grid__btn"
+                      aria-label="Follow Tyler Moore on Facebook"
+                    >
+                      <svg class="media-grid__icon" width="20" height="32">
                         <use href="images/icons.svg#icon-facebook-1"></use>
                       </svg>
-                    </button>
+                    </a>
                   </li>
                   <li>
-                    <button class="media-grid__btn" type="button">
-                      <svg
-                        class="media-grid__icon"
-                        width="20"
-                        height="20"
-                        x="12"
-                        y="12"
-                      >
+                    <a
+                      href="https://linkedin.com"
+                      class="media-grid__btn"
+                      aria-label="Connect with Tyler Moore on LinkedIn"
+                    >
+                      <svg class="media-grid__icon" width="20" height="20">
                         <use href="images/icons.svg#icon-linkedin-1"></use>
                       </svg>
-                    </button>
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -506,53 +556,84 @@
           </ul>
         </div>
       </section>
+
       <section class="section">
         <div class="container">
           <div class="customer-section">
             <h2 class="section__title">Regular Customers</h2>
             <ul class="grid grid--padding">
               <li class="grid__logo-item">
-                <svg class="grid__logo" width="106" height="60">
-                  <use href="images/icons.svg#icon-Union1"></use>
-                </svg>
+                <a href="https://example1.com" aria-label="Union1 Company">
+                  <svg class="grid__logo" width="106" height="60" role="img">
+                    <title>Union1</title>
+                    <use href="images/icons.svg#icon-Union1"></use>
+                  </svg>
+                </a>
               </li>
               <li class="grid__logo-item">
-                <svg class="grid__logo" width="106" height="60">
-                  <use href="images/icons.svg#icon-Logo2"></use>
-                </svg>
+                <a href="https://example2.com" aria-label="Logo2 Company">
+                  <svg class="grid__logo" width="106" height="60" role="img">
+                    <title>Logo2</title>
+                    <use href="images/icons.svg#icon-Logo2"></use>
+                  </svg>
+                </a>
               </li>
               <li class="grid__logo-item">
-                <svg class="grid__logo" width="106" height="60">
-                  <use href="images/icons.svg#icon-Logo3"></use>
-                </svg>
+                <a href="https://example3.com" aria-label="Logo3 Company">
+                  <svg class="grid__logo" width="106" height="60" role="img">
+                    <title>Logo3</title>
+                    <use href="images/icons.svg#icon-Logo3"></use>
+                  </svg>
+                </a>
               </li>
               <li class="grid__logo-item">
-                <svg class="grid__logo" width="106" height="60">
-                  <use href="images/icons.svg#icon-Logo4"></use>
-                </svg>
+                <a href="https://example4.com" aria-label="Logo4 Company">
+                  <svg class="grid__logo" width="106" height="60" role="img">
+                    <title>Logo4</title>
+                    <use href="images/icons.svg#icon-Logo4"></use>
+                  </svg>
+                </a>
               </li>
               <li class="grid__logo-item">
-                <svg class="grid__logo" width="106" height="60">
-                  <use href="images/icons.svg#icon-Logo6"></use>
-                </svg>
+                <a href="https://example5.com" aria-label="Logo6 Company">
+                  <svg class="grid__logo" width="106" height="60" role="img">
+                    <title>Logo6</title>
+                    <use href="images/icons.svg#icon-Logo6"></use>
+                  </svg>
+                </a>
               </li>
               <li class="grid__logo-item">
-                <svg class="grid__logo" width="106" height="60">
-                  <use href="images/icons.svg#icon-Logo7"></use>
-                </svg>
+                <a href="https://example6.com" aria-label="Logo7 Company">
+                  <svg class="grid__logo" width="106" height="60" role="img">
+                    <title>Logo7</title>
+                    <use href="images/icons.svg#icon-Logo7"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
           </div>
         </div>
       </section>
     </main>
-    <div class="menu-container js-menu-container" id="mobile-menu">
+    <div
+      class="menu-container js-menu-container"
+      id="mobile-menu"
+      aria-hidden="true"
+    >
       <button
         class="modal__btn modal__btn--mobile js-close-menu"
         type="button"
+        aria-label="Close Menu"
         data-modal-close
       >
-        <svg class="modal__icon" width="11" height="11" x="3" y="7">
+        <svg
+          class="modal__icon"
+          width="11"
+          height="11"
+          x="3"
+          y="7"
+          aria-hidden="true"
+        >
           <use href="images/icons.svg#icon-Vector"></use>
         </svg>
       </button>
@@ -561,7 +642,7 @@
           <a class="mobile-menu__link" href="index.html">Studio</a>
         </li>
         <li>
-          <a href="portofolio.html" class="mobile-menu__link">Portofolio</a>
+          <a href="portfolio.html" class="mobile-menu__link">Portfolio</a>
         </li>
         <li>
           <a href="#contact-section" class="mobile-menu__link">Contacts</a>
@@ -571,35 +652,67 @@
         <ul class="mobile-contact">
           <li>
             <a class="mobile-contact__phone" href="tel:+12127724150">
-              +1 212-772-4150</a
-            >
+              <span class="sr-only">Call us at</span> +1 212-772-4150
+            </a>
           </li>
-
           <li>
             <a class="mobile-contact__email" href="mailto:info@devstudio.com">
-              info@devstudio.com</a
-            >
+              <span class="sr-only">Email us at</span> info@devstudio.com
+            </a>
           </li>
         </ul>
         <ul class="mobile-social">
-          <li><a class="mobile-social__link" href="#">Instagram</a></li>
+          <li>
+            <a
+              class="mobile-social__link"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Instagram</a
+            >
+          </li>
           <li class="mobile-social__rule"><span></span></li>
-          <li><a class="mobile-social__link" href="#">Twitter</a></li>
+          <li>
+            <a
+              class="mobile-social__link"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Twitter</a
+            >
+          </li>
           <li class="mobile-social__rule"><span></span></li>
-          <li><a class="mobile-social__link" href="#">Facebook</a></li>
+          <li>
+            <a
+              class="mobile-social__link"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Facebook</a
+            >
+          </li>
           <li class="mobile-social__rule"><span></span></li>
-          <li><a class="mobile-social__link" href="#">LinkedIn</a></li>
+          <li>
+            <a
+              class="mobile-social__link"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </li>
         </ul>
       </div>
     </div>
+
     <!--Logo and adress-->
     <footer>
       <section class="footer-section">
         <div class="container">
           <div class="grid grid--gap">
             <div class="footer-contact">
-              <a class="logo logo--color-white" href="webstudio.com"
-                ><span class="logo__span">Web</span>Studio</a
+              <a class="logo logo--color-white" href="https://webstudio.com">
+                <span class="logo__span">Web</span>Studio</a
               >
               <address class="address">
                 <ul class="contact">
@@ -623,6 +736,7 @@
                 </ul>
               </address>
             </div>
+
             <div class="grid grid--flex-direction">
               <h3 class="grid__title grid__title--color-white">Find us on</h3>
               <ul class="media-grid">
@@ -630,13 +744,14 @@
                   <button
                     class="media-grid__btn media-grid__btn--background"
                     type="button"
+                    aria-label="Instagram"
                   >
                     <svg
                       class="media-grid__icon media-grid__icon--color"
                       width="20"
                       height="20"
-                      x="12"
-                      y="12"
+                      aria-hidden="true"
+                      role="img"
                     >
                       <use href="images/icons.svg#icon-instagram-2"></use>
                     </svg>
@@ -646,13 +761,14 @@
                   <button
                     class="media-grid__btn media-grid__btn--background"
                     type="button"
+                    aria-label="Twitter"
                   >
                     <svg
-                      class="media-grid__ico media-grid__icon--color"
+                      class="media-grid__icon media-grid__icon--color"
                       width="23"
                       height="19"
-                      x="12"
-                      y="13.88"
+                      aria-hidden="true"
+                      role="img"
                     >
                       <use href="images/icons.svg#icon-twitter-1"></use>
                     </svg>
@@ -662,13 +778,14 @@
                   <button
                     class="media-grid__btn media-grid__btn--background"
                     type="button"
+                    aria-label="Facebook"
                   >
                     <svg
                       class="media-grid__icon media-grid__icon--color"
                       width="20"
                       height="32"
-                      x="17.16"
-                      y="12"
+                      aria-hidden="true"
+                      role="img"
                     >
                       <use href="images/icons.svg#icon-facebook-1"></use>
                     </svg>
@@ -678,13 +795,14 @@
                   <button
                     class="media-grid__btn media-grid__btn--background"
                     type="button"
+                    aria-label="LinkedIn"
                   >
                     <svg
                       class="media-grid__icon media-grid__icon--color"
                       width="20"
                       height="20"
-                      x="12"
-                      y="12"
+                      aria-hidden="true"
+                      role="img"
                     >
                       <use href="images/icons.svg#icon-linkedin-1"></use>
                     </svg>
@@ -692,6 +810,7 @@
                 </li>
               </ul>
             </div>
+
             <form class="grid grid--flex-direction">
               <h3 class="grid__title grid__title--color-white">
                 Subscribe to the newsletter
@@ -702,10 +821,17 @@
                   type="email"
                   name="email"
                   placeholder="E-mail"
+                  required
                 />
                 <button class="grid__send-btn" type="submit">
                   Subscribe
-                  <svg class="grid__send-icon" width="24" height="24">
+                  <svg
+                    class="grid__send-icon"
+                    width="24"
+                    height="24"
+                    aria-hidden="true"
+                    role="img"
+                  >
                     <use href="images/icons.svg#icon-send"></use>
                   </svg>
                 </button>
@@ -715,6 +841,7 @@
         </div>
       </section>
     </footer>
+
     <script src="./modal.js"></script>
     <script src="mobile-menu.js"></script>
   </body>

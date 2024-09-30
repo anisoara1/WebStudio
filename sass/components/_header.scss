@@ -51,7 +51,7 @@
   }
 
   &__item-studio,
-  &__item-portofolio,
+  &__item-portfolio,
   &__item {
     position: relative;
     font-weight: 500;
@@ -70,7 +70,7 @@
   }
 }
 
-.portofolio-page .navigate__item-portofolio::after,
+.portfolio-page .navigate__item-portfolio::after,
 .studio-page .navigate__item-studio::after {
   content: "";
   position: absolute;
@@ -106,7 +106,7 @@
     color: $colorWhite;
   }
 
-  &__item {
+  &__item{
     line-height: 16px;
     color: $mediumGrey;
     text-decoration: none;
