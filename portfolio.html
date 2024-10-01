@@ -14,55 +14,59 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/main.css" />
+
+    <link rel="stylesheet" href="css/main.min.css" />
     <title>Portfolio</title>
   </head>
   <body class="portfolio-page">
     <header class="header-section">
       <div class="container">
         <div class="header">
-          <a class="logo" href="webstudio.com"
-            ><span class="logo__span">Web</span>Studio</a
-          >
+          <a class="logo" href="index.html">
+            <span class="logo__span">Web</span>Studio
+          </a>
+          <nav class="navigate menu">
+            <nav class="navigate menu">
+              <ul class="navigate__list">
+                <li>
+                  <a class="navigate__item-studio" href="index.html">Studio</a>
+                </li>
+                <li>
+                  <a class="navigate__item-portfolio" href="portfolio.html"
+                    >Portfolio</a
+                  >
+                </li>
+                <li>
+                  <a class="navigate__item" href="#contact">Contacts</a>
+                </li>
+              </ul>
+            </nav>
+          </nav>
           <button
             class="menu-toggle js-open-menu"
             aria-expanded="false"
             aria-controls="mobile-menu"
           >
             <svg class="menu-toggle__icon" width="24" height="24">
-              <use href="images/icons.svg#icon-mobile-meniu-nav"></use>
+              <use xlink:href="images/icons.svg#icon-mobile-menu-nav"></use>
             </svg>
           </button>
-          <nav class="navigate menu">
-            <ul class="navigate__list">
-              <li>
-                <a class="navigate__item-studio" href="index.html">Studio</a>
-              </li>
-              <li>
-                <a class="navigate__item-portfolio" href="portfolio.html"
-                  >Portfolio</a
-                >
-              </li>
-              <li>
-                <a class="navigate__item" href="#contact">Contacts</a>
-              </li>
-            </ul>
-          </nav>
           <ul class="contact contact--flex-direction menu">
             <li>
               <a class="contact__item" href="mailto:info@devstudio.com">
                 <svg class="contact__icon" width="16" height="12">
-                  <use href="images/icons.svg#icon-envelope"></use></svg
-                >info@devstudio.com</a
-              >
+                  <use xlink:href="images/icons.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
             </li>
             <li>
               <a class="contact__item" href="tel:+12127724150">
                 <svg class="contact__icon" width="10" height="16">
-                  <use href="images/icons.svg#icon-smartphone"></use></svg
-                >+1 212-772-4150</a
-              >
+                  <use xlink:href="images/icons.svg#icon-smartphone"></use>
+                </svg>
+                +1 212-772-4150
+              </a>
             </li>
           </ul>
         </div>

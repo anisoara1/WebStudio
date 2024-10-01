@@ -21,7 +21,7 @@ body {
   overflow-x: hidden;
 }
 
-.container {
+/* .container {
   width: 1200px;
   margin: 0 auto;
 }
@@ -31,7 +31,7 @@ body {
   visibility: hidden;
 }
 
-/* Header section */
+Header section 
 
 .header-section {
   border-bottom: 1px solid #ececec;
@@ -70,7 +70,7 @@ body {
 }
 
 .navigate__item-studio,
-.navigate__item-portofolio,
+.navigate__item-portfolio,
 .navigate__item {
   position: relative;
   font-weight: 500;
@@ -80,7 +80,7 @@ body {
   color: var(--black);
 }
 
-.portofolio-page .navigate__item-portofolio::after,
+.portfolio-page .navigate__item-portfolio::after,
 .studio-page .navigate__item-studio::after {
   content: "";
   position: absolute;
@@ -127,16 +127,16 @@ body {
 .contact__icon:focus,
 .navigate__item-index:hover,
 .navigate__item-index:focus,
-.navigate__item-portofolio:hover,
-.navigate__item-portofolio:focus,
+.navigate__item-portfolio:hover,
+.navigate__item-portfolio:focus,
 .navigate__item:focus,
 .navigate__item:hover {
   fill: var(--blue);
   color: var(--blue);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-/* Studio page*/
-/* First section */
+ Studio page
+ First section 
 
 .first-section {
   background-image: linear-gradient(rgba(47, 48, 58, 0.4) 180%, #c4c4c4 300%),
@@ -380,7 +380,7 @@ textarea::placeholder {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Second section */
+Second section 
 
 .section {
   margin: 93px 0 0 0;
@@ -429,7 +429,7 @@ textarea::placeholder {
   max-width: 270px;
 }
 
-/* Third section */
+ Third section 
 
 .grid__item {
   position: relative;
@@ -441,7 +441,7 @@ textarea::placeholder {
   display: block;
 }
 
-/* Fourth section */
+Fourth section 
 
 .grid__title--label {
   margin: 0;
@@ -458,7 +458,7 @@ textarea::placeholder {
   padding: 27px;
 }
 
-/* Fifth section */
+ Fifth section 
 
 .section--grey-background {
   background: #f5f4fa;
@@ -542,7 +542,7 @@ textarea::placeholder {
   cursor: pointer;
 }
 
-/* Sixth section */
+ Sixth section 
 
 .grid__logo-item {
   fill: #afb1b8;
@@ -564,7 +564,7 @@ textarea::placeholder {
   cursor: pointer;
 }
 
-/* Footer section */
+Footer section 
 
 .footer-section {
   background: var(--dark-grey);
@@ -655,7 +655,7 @@ textarea::placeholder {
   left: 148px;
 }
 
-/* Portofolio page*/
+portfolio page
 
 .grid--margin-bottom {
   display: flex;
@@ -693,7 +693,7 @@ textarea::placeholder {
   margin-bottom: 94px;
 }
 
-.grid__portofolio-card {
+.grid__portfolio-card {
   border: 1px solid #eeeeee;
 }
 
@@ -884,8 +884,8 @@ textarea::placeholder {
   }
 
   .grid__overaly,
-  .grid__portofolio-card,
-  .grid__img-portofolio,
+  .grid__portfolio-card,
+  .grid__img-portfolio,
   .grid__img {
     min-width: 450px;
   }
@@ -1027,7 +1027,7 @@ textarea::placeholder {
 
   .grid__img,
   .grid__overaly,
-  .grid__portofolio-card {
+  .grid__portfolio-card {
     max-width: 354px;
   }
 
@@ -1168,3 +1168,5 @@ textarea::placeholder {
   transform: rotate(90deg);
   margin-top: 10px;
 }
+
+ */
